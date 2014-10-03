@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Scraping.Models.IndexViewModel
+
+@{
     ViewBag.Title = "Index";
 }
 
@@ -7,7 +9,13 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false)
 
-    @Html.TextBox("Orgnr");
+    @Html.TextBox("Orgnr")
     <button type="submit">Sök</button>
+}
+
+@if (!string.IsNullOrEmpty(Model.CompanyName))
+{
+    @Html.DisplayFor(m => Model.CompanyName)
 }
