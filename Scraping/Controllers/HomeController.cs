@@ -21,7 +21,7 @@ namespace Scraping.Controllers
         {
             if (string.IsNullOrEmpty(orgNr) || string.IsNullOrEmpty(sida))
                 return View();
-            var client = new Client(orgNr, sida);
+            var client = new ScrapingClient(orgNr, sida);
             await client.GetHtmlContentFromScraping();
             var company = client.GetCompanyName();
             return View(new IndexViewModel { CompanyName = company });

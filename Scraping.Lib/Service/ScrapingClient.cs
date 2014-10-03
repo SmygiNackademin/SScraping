@@ -4,14 +4,14 @@ using Scraping.Lib.Interface;
 
 namespace Scraping.Lib.Service
 {
-    public class Client : IClient
+    public class ScrapingClient : IScrapingClient
     {
         public string Content { get; set; }
         private readonly string _site;
         private readonly string _orgNr;
         private readonly HttpClient _client = new HttpClient();
 
-        public Client(string orgNr, string site)
+        public ScrapingClient(string orgNr, string site)
         {
             _orgNr = ValidateOrgNr(orgNr);
             _site = site;

@@ -2,7 +2,7 @@
 
 namespace Scraping.Lib.Interface
 {
-    public interface IClient
+    public interface IScrapingClient
     {
         Task GetHtmlContentFromScraping();
         string GetCompanyName();

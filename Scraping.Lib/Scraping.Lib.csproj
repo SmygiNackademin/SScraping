@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service\Client.cs" />
-    <Compile Include="Interface\IClient.cs" />
+    <Compile Include="Service\ScrapingClient.cs" />
+    <Compile Include="Interface\IScrapingClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
