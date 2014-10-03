@@ -21,19 +21,10 @@ namespace Scraping.Controllers
         {
             if (string.IsNullOrEmpty(orgNr))
                 return View();
-            var client = new Client(ValidateOrgnr(orgNr));
+            var client = new Client(orgNr);
             await client.Start();
             var company = client.Dissect();
             return View(new IndexViewModel { CompanyName = company });
-        }
-
-        private string ValidateOrgnr(string orgNr)
-        {
-            if (orgNr.Contains("-"))
-                orgNr = orgNr.Replace("-", "");
-            if (orgNr.Contains(" "))
-                orgNr = orgNr.Replace(" ", "");
-            return orgNr;
         }
     }
 }

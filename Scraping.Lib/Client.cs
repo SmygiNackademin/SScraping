@@ -11,7 +11,16 @@ namespace Scraping.Lib
 
         public Client(string orgNr)
         {
-            address += orgNr;
+            address += ValidateOrgNr(orgNr);
+        }
+
+        private string ValidateOrgNr(string orgNr)
+        {
+            if (orgNr.Contains("-"))
+                orgNr = orgNr.Replace("-", "");
+            if (orgNr.Contains(" "))
+                orgNr = orgNr.Replace(" ", "");
+            return orgNr;
         }
 
         public async Task Start()
