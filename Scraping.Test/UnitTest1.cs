@@ -9,7 +9,7 @@ namespace Scraping.Test
     public class UnitTest1
     {
         [TestMethod]
-        public async Task TestScreenScrapingResult()
+        public async Task TestScreenScrapingAllabolagResult()
         {
             const string excepted = "Mattias Asplund Aktiebolag";
             var client = new Client("556599-5239");
