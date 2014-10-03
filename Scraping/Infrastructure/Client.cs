@@ -7,7 +7,7 @@ namespace Scraping.Infrastructure
     {
         public string Content { get; set; }
         private string address = "http://allabolag.se/";
-        HttpClient _client = new HttpClient();
+        private readonly HttpClient _client = new HttpClient();
 
         public Client(string orgNr)
         {
