@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraping.Lib", "Scraping.Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraping.Test", "Scraping.Test\Scraping.Test.csproj", "{FF714915-4F62-41A7-9873-91CDF74E4E41}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Scrapping.UML", "Scrapping.UML\Scrapping.UML.modelproj", "{F6AA3B8B-8F37-480C-ADC8-F7EA0BADC228}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FF714915-4F62-41A7-9873-91CDF74E4E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF714915-4F62-41A7-9873-91CDF74E4E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF714915-4F62-41A7-9873-91CDF74E4E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6AA3B8B-8F37-480C-ADC8-F7EA0BADC228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6AA3B8B-8F37-480C-ADC8-F7EA0BADC228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6AA3B8B-8F37-480C-ADC8-F7EA0BADC228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6AA3B8B-8F37-480C-ADC8-F7EA0BADC228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
