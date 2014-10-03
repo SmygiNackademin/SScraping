@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Mvc;
-using Scraping.Lib;
+using Scraping.Lib.Service;
 using Scraping.Models;
 
 namespace Scraping.Controllers
@@ -17,13 +17,13 @@ namespace Scraping.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Index(string orgNr)
+        public async Task<ActionResult> Index(string orgNr, string sida)
         {
-            if (string.IsNullOrEmpty(orgNr))
+            if (string.IsNullOrEmpty(orgNr) || string.IsNullOrEmpty(sida))
                 return View();
-            var client = new Client(orgNr);
-            await client.Start();
-            var company = client.Dissect();
+            var client = new Client(orgNr, sida);
+            await client.GetHtmlContentFromScraping();
+            var company = client.GetCompanyName();
             return View(new IndexViewModel { CompanyName = company });
         }
     }

@@ -12,6 +12,7 @@
     @Html.ValidationSummary(false)
 
     @Html.TextBox("Orgnr")
+    @Html.DropDownList("Sida", Model.SiteList)
     <button type="submit">Sök</button>
 }
 
