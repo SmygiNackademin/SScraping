@@ -1,31 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="003e7634-08fe-4534-9e06-40deb5189776" name="AllaBolagSystem" linkedPackageId="4df85d7f-a36a-49a9-ae86-c3ccd382530d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="f7468cac-8a74-4e9a-8515-36d874e19495">
-      <profileInstance Id="54e576f4-9a30-4a8f-ae22-6f15b2d73d03" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="3ad930bd-cd9b-47e0-8dbc-7019e4686403">
-      <profileInstance Id="52233dd6-8c89-4b68-a10c-3836de17ab91" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
-      <subsystem Id="d3ceb600-efb5-4c12-bf8b-81aaef7acd40" name="SubSystem" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <subsystem Id="d3ceb600-efb5-4c12-bf8b-81aaef7acd40" name="ScrapingSystem" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="07831a1c-d0cc-44a8-a7a6-ad19f7d29077" />
       </subsystem>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <actor Id="6a3ba7d9-9580-4d19-bd58-e9c2f459d999" name="Visitors" isAbstract="false" isLeaf="false">
+      <actor Id="6a3ba7d9-9580-4d19-bd58-e9c2f459d999" name="Visitor" isAbstract="false" isLeaf="false">
         <elementDefinition Id="a619e09d-b6f3-4d57-9137-309bd13b71fd" />
         <targetEnds>
           <association Id="28b4f3a3-4d7f-4cea-a4a1-edf62bd47a95" isDerived="false" sourceEndRoleName="Visitors" targetEndRoleName="Receive Information" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="bf7742ea-4ddf-48b5-bea3-ef7022ca09b7" LastKnownName="Receive Information" />
+            <useCaseMoniker Id="bf7742ea-4ddf-48b5-bea3-ef7022ca09b7" LastKnownName="Find Company Name" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="304b6ebf-94ec-487e-87f9-968e94570b4c" name="Visitors" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -44,15 +30,29 @@
       </actor>
     </useCaseModelRootHasTypes>
     <packageHasNamedElement>
-      <useCase Id="bf7742ea-4ddf-48b5-bea3-ef7022ca09b7" name="Receive Information" isAbstract="false" isLeaf="false">
+      <useCase Id="bf7742ea-4ddf-48b5-bea3-ef7022ca09b7" name="Find Company Name" isAbstract="false" isLeaf="false">
         <elementDefinition Id="0f486d8b-a46b-4a18-b8ac-7ee131026f95" />
         <subjects>
-          <subsystemMoniker Id="d3ceb600-efb5-4c12-bf8b-81aaef7acd40" LastKnownName="SubSystem" />
+          <subsystemMoniker Id="d3ceb600-efb5-4c12-bf8b-81aaef7acd40" LastKnownName="ScrapingSystem" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <package Id="4df85d7f-a36a-49a9-ae86-c3ccd382530d" name="Scrapping.UML">
     <elementDefinition Id="920ada9b-6241-4bc3-a844-d52676034acc" />
+    <profileInstances>
+      <packageHasProfileInstances Id="f7468cac-8a74-4e9a-8515-36d874e19495">
+        <profileInstance Id="54e576f4-9a30-4a8f-ae22-6f15b2d73d03" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3ad930bd-cd9b-47e0-8dbc-7019e4686403">
+        <profileInstance Id="52233dd6-8c89-4b68-a10c-3836de17ab91" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

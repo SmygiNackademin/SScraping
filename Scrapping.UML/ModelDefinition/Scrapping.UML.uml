@@ -21,7 +21,7 @@
     <packageHasNamedElement>
       <subsystem
         Id="07831a1c-d0cc-44a8-a7a6-ad19f7d29077"
-        name="SubSystem"
+        name="ScrapingSystem"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
@@ -29,7 +29,7 @@
     <packageHasNamedElement>
       <actor
         Id="a619e09d-b6f3-4d57-9137-309bd13b71fd"
-        name="Visitors"
+        name="Visitor"
         isAbstract="false"
         isLeaf="false">
         <targetEnds>
@@ -42,7 +42,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="0f486d8b-a46b-4a18-b8ac-7ee131026f95"
-              LastKnownName="Receive Information"
+              LastKnownName="Find Company Name"
               LastKnownLocation="Scrapping.UML.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -99,13 +99,13 @@
     <packageHasNamedElement>
       <useCase
         Id="0f486d8b-a46b-4a18-b8ac-7ee131026f95"
-        name="Receive Information"
+        name="Find Company Name"
         isAbstract="false"
         isLeaf="false">
         <subjects>
           <subsystemMoniker
             Id="07831a1c-d0cc-44a8-a7a6-ad19f7d29077"
-            LastKnownName="SubSystem"
+            LastKnownName="ScrapingSystem"
             LastKnownLocation="Scrapping.UML.uml" />
         </subjects>
       </useCase>
