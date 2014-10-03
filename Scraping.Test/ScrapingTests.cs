@@ -18,7 +18,7 @@ namespace Scraping.Test
         }
 
         [TestMethod]
-        public async Task TestScreenScrapingEniro()
+        public async Task TestScreenScrapingEniroResult()
         {
             const string expected = "Mattias Asplund AB";
             var client = new ScrapingClient("556599-5239", "http://gulasidorna.eniro.se/hitta:");
