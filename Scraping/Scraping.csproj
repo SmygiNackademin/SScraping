@@ -130,7 +130,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\Client.cs" />
     <Compile Include="Infrastructure\DissectHtmlPage.cs" />
     <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,6 +225,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scraping.Lib\Scraping.Lib.csproj">
+      <Project>{a511e267-d373-4002-ab43-8244847034ec}</Project>
+      <Name>Scraping.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

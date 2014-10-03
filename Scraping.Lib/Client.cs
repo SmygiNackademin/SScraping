@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Scraping.Infrastructure
+namespace Scraping.Lib
 {
     public class Client
     {
@@ -18,6 +18,11 @@ namespace Scraping.Infrastructure
         {
             var response = await _client.GetAsync(address);
             Content = await response.Content.ReadAsStringAsync();
+        }
+
+        public string Dissect()
+        {
+            return DissectHtmlPage.Dissect(Content);
         }
     }
 }
