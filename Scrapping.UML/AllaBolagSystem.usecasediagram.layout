@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AllaBolagSystem">
+  <useCaseModelRootMoniker Id="003e7634-08fe-4534-9e06-40deb5189776" />
+  <nestedChildShapes>
+    <actorShape Id="c81e4862-900e-4693-ae60-a12168b2e061" absoluteBounds="3.375, 1.25, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="6a3ba7d9-9580-4d19-bd58-e9c2f459d999" LastKnownName="Visitors" />
+      <relativeChildShapes />
+    </actorShape>
+    <SubsystemShape Id="563c4026-f9bc-422a-82b3-dce5081c0c2e" absoluteBounds="5, 0.875, 3, 1.75" customColor="Silver">
+      <subsystemMoniker Id="d3ceb600-efb5-4c12-bf8b-81aaef7acd40" LastKnownName="SubSystem" />
+      <nestedChildShapes>
+        <useCaseShape Id="a4174d8b-75a1-4d83-a0f6-e1ddb2df3714" absoluteBounds="5.75, 1.625, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="bf7742ea-4ddf-48b5-bea3-ef7022ca09b7" LastKnownName="Receive Information" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(3.875 : 1.53571428571429); (5.76923802617959 : 1.80631971802566)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="28b4f3a3-4d7f-4cea-a4a1-edf62bd47a95" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="c81e4862-900e-4693-ae60-a12168b2e061" />
+        <useCaseShapeMoniker Id="a4174d8b-75a1-4d83-a0f6-e1ddb2df3714" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

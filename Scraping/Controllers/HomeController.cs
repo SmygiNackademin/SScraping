@@ -1,6 +1,5 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Mvc;
-using Scraping.Infrastructure;
 using Scraping.Lib;
 using Scraping.Models;
 
