@@ -11,8 +11,7 @@ namespace Scraping.Lib.Service
         public string GetCompanyNameByOrgNr(string orgNr)
         {
             var webClient = new HtmlWeb();
-            var htmlCLient = new HtmlDocument();
-            htmlCLient = webClient.Load(Site + orgNr);
+            var htmlCLient = webClient.Load(Site + orgNr);
             return htmlCLient.DocumentNode.SelectSingleNode(Xpath).InnerText;
         }
     }
