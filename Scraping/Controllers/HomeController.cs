@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Mvc;
-using Scraping.Lib.Service;
+using Scraping.Lib.Factory;
 using Scraping.Models;
 
 namespace Scraping.Controllers
@@ -21,10 +21,19 @@ namespace Scraping.Controllers
         {
             if (string.IsNullOrEmpty(orgNr) || string.IsNullOrEmpty(sida))
                 return View();
-            var client = new ScrapingClient(orgNr, sida);
+            var client = ScrapingFactory.CreateScreenScraper(ValidateOrgNr(orgNr), sida);
             await client.GetHtmlContentFromScraping();
             var company = client.GetCompanyName();
             return View(new IndexViewModel { CompanyName = company });
+        }
+
+        private string ValidateOrgNr(string orgNr)
+        {
+            if (orgNr.Contains("-"))
+                orgNr = orgNr.Replace("-", "");
+            if (orgNr.Contains(" "))
+                orgNr = orgNr.Replace(" ", "");
+            return orgNr;
         }
     }
 }
