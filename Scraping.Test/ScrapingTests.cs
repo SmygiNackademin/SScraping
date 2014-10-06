@@ -9,22 +9,20 @@ namespace Scraping.Test
     public class ScrapingTests
     {
         [TestMethod]
-        public async Task TestScreenScrapingAllabolagResult()
+        public void TestScreenScrapingAllabolagResult()
         {
             const string expected = "Mattias Asplund Aktiebolag";
             var client = ScrapingFactory.CreateScreenScraper("556599-5239", "Allabolag");
-            await client.GetHtmlContentFromScraping();
-            var actual = client.GetCompanyName();
+            var actual = client.GetHtmlContentFromScraping();
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public async Task TestScreenScrapingEniroResult()
+        public void TestScreenScrapingEniroResult()
         {
             const string expected = "Mattias Asplund AB";
             var client = ScrapingFactory.CreateScreenScraper("556599-5239", "Eniro");
-            await client.GetHtmlContentFromScraping();
-            var actual = client.GetCompanyName();
+            var actual = client.GetHtmlContentFromScraping();
             Assert.AreEqual(expected, actual);
         }
     }
