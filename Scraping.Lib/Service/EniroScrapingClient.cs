@@ -16,10 +16,11 @@ namespace Scraping.Lib.Service
             _orgNr = orgNr;
         }
 
-        public async Task GetHtmlContentFromScraping()
+        public async Task<string> GetHtmlContentFromScraping()
         {
             var response = await _client.GetAsync(_site + _orgNr);
             Content = await response.Content.ReadAsStringAsync();
+            return "";
         }
 
         public string GetCompanyName()
