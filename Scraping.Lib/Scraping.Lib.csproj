@@ -48,7 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\EniroScrapingClient.cs" />
     <Compile Include="Factory\ScrapingFactory.cs" />
+    <Compile Include="Service\HittaScrapingClient.cs" />
     <Compile Include="Service\ScrapingClient.cs" />
+    <Compile Include="Service\UpplysningClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
