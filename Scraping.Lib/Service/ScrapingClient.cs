@@ -1,6 +1,4 @@
-﻿using System.Net;
-using System.Text;
-using HtmlAgilityPack;
+﻿using HtmlAgilityPack;
 using Scraping.Lib.Interface;
 
 namespace Scraping.Lib.Service
@@ -10,11 +8,11 @@ namespace Scraping.Lib.Service
         public abstract string Site { get; }
         public abstract string Xpath { get; }
 
-        public string GetHtmlContentFromScraping()
+        public string GetCompanyNameByOrgNr(string orgNr)
         {
             var webClient = new HtmlWeb();
             var htmlCLient = new HtmlDocument();
-            htmlCLient = webClient.Load(Site);
+            htmlCLient = webClient.Load(Site + orgNr);
             return htmlCLient.DocumentNode.SelectSingleNode(Xpath).InnerText;
         }
     }

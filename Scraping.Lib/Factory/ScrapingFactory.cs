@@ -7,16 +7,16 @@ namespace Scraping.Lib.Factory
 {
     public class ScrapingFactory
     {
-        public static IScrapingClient CreateScreenScraper(string orgNr, string site)
+        public static IScrapingClient CreateScreenScraper(string site)
         {
             if (site.ToLower().Contains("eniro"))
-                return new EniroScrapingClient(orgNr);
+                return new EniroScrapingClient();
             else if (site.ToLower().Contains("hitta"))
-                return new HittaScrapingClient(orgNr);
+                return new HittaScrapingClient();
             else if (site.ToLower().Contains("upplysning"))
-                return new UpplysningScrapingClient(orgNr);
+                return new UpplysningScrapingClient();
             else
-                return new AllabolagScrapingClient(orgNr);
+                return new AllabolagScrapingClient();
         }
     }
 }

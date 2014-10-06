@@ -1,7 +1,5 @@
-﻿using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Scraping.Lib.Factory;
-using Scraping.Lib.Service;
 
 namespace Scraping.Test
 {
@@ -12,8 +10,8 @@ namespace Scraping.Test
         public void TestScreenScrapingAllabolagResult()
         {
             const string expected = "Mattias Asplund Aktiebolag";
-            var client = ScrapingFactory.CreateScreenScraper("556599-5239", "Allabolag");
-            var actual = client.GetHtmlContentFromScraping();
+            var client = ScrapingFactory.CreateScreenScraper("Allabolag");
+            var actual = client.GetCompanyNameByOrgNr("556599-5239");
             Assert.AreEqual(expected, actual);
         }
 
@@ -21,8 +19,8 @@ namespace Scraping.Test
         public void TestScreenScrapingEniroResult()
         {
             const string expected = "Mattias Asplund AB";
-            var client = ScrapingFactory.CreateScreenScraper("556599-5239", "Eniro");
-            var actual = client.GetHtmlContentFromScraping();
+            var client = ScrapingFactory.CreateScreenScraper("Eniro");
+            var actual = client.GetCompanyNameByOrgNr("556599-5239");
             Assert.AreEqual(expected, actual);
         }
     }

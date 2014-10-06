@@ -20,8 +20,8 @@ namespace Scraping.Controllers
         {
             if (string.IsNullOrEmpty(orgNr) || string.IsNullOrEmpty(sida))
                 return View();
-            var client = ScrapingFactory.CreateScreenScraper(ValidateOrgNr(orgNr), sida);
-            var company = client.GetHtmlContentFromScraping();
+            var client = ScrapingFactory.CreateScreenScraper(sida);
+            var company = client.GetCompanyNameByOrgNr(ValidateOrgNr(orgNr));
             return View(new IndexViewModel { CompanyName = company });
         }
 
