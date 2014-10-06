@@ -12,9 +12,9 @@ namespace Scraping.Lib.Service
 
         public string GetHtmlContentFromScraping()
         {
-            var webClient = new WebClient();
+            var webClient = new HtmlWeb();
             var htmlCLient = new HtmlDocument();
-            htmlCLient.Load(webClient.OpenRead(Site), Encoding.Default);
+            htmlCLient = webClient.Load(Site);
             return htmlCLient.DocumentNode.SelectSingleNode(Xpath).InnerText;
         }
     }

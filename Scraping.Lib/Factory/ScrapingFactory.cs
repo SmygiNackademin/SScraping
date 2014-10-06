@@ -12,7 +12,7 @@ namespace Scraping.Lib.Factory
             if (site.ToLower().Contains("eniro"))
                 return new EniroScrapingClient(orgNr);
             else if (site.ToLower().Contains("hitta"))
-                return null;
+                return new HittaScrapingClient(orgNr);
             else if (site.ToLower().Contains("upplysning"))
                 return new UpplysningScrapingClient(orgNr);
             else
