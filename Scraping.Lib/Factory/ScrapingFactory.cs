@@ -10,10 +10,13 @@ namespace Scraping.Lib.Factory
         public static IScrapingClient CreateScreenScraper(string orgNr, string site)
         {
             if (site.ToLower().Contains("eniro"))
-            {
                 return new EniroScrapingClient(orgNr);
-            }
-            return new AllabolagScrapingClient(orgNr);
+            else if (site.ToLower().Contains("hitta"))
+                return null;
+            else if (site.ToLower().Contains("upplysning"))
+                return new UpplysningScrapingClient(orgNr);
+            else
+                return new AllabolagScrapingClient(orgNr);
         }
     }
 }

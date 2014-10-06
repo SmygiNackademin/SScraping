@@ -16,6 +16,8 @@ namespace Scraping.Models
             var siteList = new Dictionary<string, string>();
             siteList.Add("Allabolag", "Allabolag");
             siteList.Add("Eniro", "Eniro");
+            siteList.Add("Hitta.se", "Hitta");
+            siteList.Add("Upplysning.se", "Upplysning");
             SiteList = new SelectList(siteList, "Value", "Key");
         }
     }

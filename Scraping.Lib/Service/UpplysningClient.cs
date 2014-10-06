@@ -10,8 +10,8 @@ namespace Scraping.Lib.Service
             _orgNr = orgNr;
         }
 
-        public override string Site { get { return string.Format("http://www.upplysning.se:{0}", _orgNr); } }
+        public override string Site { get { return string.Format("http://www.upplysning.se/{0}", _orgNr); } }
 
-        public override string Xpath { get { return @"id('dataheader')/x:b"; } }
+        public override string Xpath { get { return @"id('dataheader')/b"; } }
     }
 }
